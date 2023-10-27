@@ -6,11 +6,10 @@ function nozero(num) {
 
 function nozero2(num) {
   let numTostring = String(num);
-  if (numTostring.lastIndexOf("0") === numTostring.length - 1) {
-    console.log(numTostring.length - 1);
+  while (numTostring.endsWith("0")) {
     numTostring = numTostring.slice(0, numTostring.length - 1);
   }
   return Number(numTostring);
 }
 
-console.log(nozero2(230));
+console.log(nozero2(2300000));
