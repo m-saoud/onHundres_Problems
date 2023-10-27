@@ -1,5 +1,5 @@
 function monktCount(monkyNum) {
-  if (monkryNum > 0) {
+  if (monkyNum > 0) {
     let monkyNewArr = [];
     for (let i = 1; i <= monkyNum; i++) {
       monkyNewArr.push(i);
