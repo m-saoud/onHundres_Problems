@@ -16,7 +16,7 @@ function shortCut2(word) {
     }
   }
 
-  return result;
+  return result.join();
 }
 
-console.log(shortCut("mazein horeabar"));
+console.log(shortCut("saoud alhasssoun "));
