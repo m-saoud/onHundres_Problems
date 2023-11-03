@@ -84,10 +84,63 @@ function sumArry(arr1, arr2) {
 console.log(sumArry([1, 2], [1, 2]));
 
 function accumMix(x) {
-    return x
-        .map((n) => (typeof n === "number" ? n : Number(n)))
-        .filter((n) => !isNaN(n))
+  return x
+    .map((n) => (typeof n === "number" ? n : Number(n)))
+    .filter((n) => !isNaN(n))
     .reduce((acc, curr) => acc + curr, 0);
 }
 
-console.log(accumMix([1, "2", 3, "5", "r",'s']));
+console.log(accumMix([1, "2", 3, "5", "r", "s"]));
+
+function fest(best, dish) {
+  if (best[0] === dish[0] && best[best.length - 1] === dish[dish.length - 1]) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(fest("samer", "samar"));
+
+// green => yalow => red => green
+function upDateLight(currenColor) {
+  switch (currenColor) {
+    case "green":
+      return "yalow";
+      break;
+    case "yalow":
+      return "red";
+      break;
+    case "red":
+      return "green";
+      break;
+    default:
+      "null";
+      break;
+  }
+}
+
+console.log(upDateLight("yalow"));
+
+function setAlarm(emplpyee, vaction) {
+  if (emplpyee === true && vaction === false) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(setAlarm(true, true));
+
+function checkQuarterOf(month) {
+  if (month < 4) {
+    return `Quarter 1`;
+  } else if (month >= 4 && month < 6) {
+    return `Quarter 2`;
+  } else if (month >= 6 && month < 9) {
+    return `Quarter 3`;
+  } else {
+    return `Quarter 4`;
+  }
+}
+console.log(checkQuarterOf(7));
