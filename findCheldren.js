@@ -144,3 +144,23 @@ function checkQuarterOf(month) {
   }
 }
 console.log(checkQuarterOf(7));
+
+function addLength(str) {
+  return str.split(" ").map((m) => m + " " + m.length);
+}
+console.log(addLength("saoud xxx"));
+
+function correct(str) {
+  return str
+    .split("")
+    .filter((m) => isNaN(parseInt(m)))
+    .join();
+}
+
+console.log(correct("sa8oud"));
+
+function correctstring(str) {
+  return str.replace(/0/g,'O').replace(/1/g,'I').replace(/5/g,'S');
+}
+
+console.log(correctstring("5a0ud1"));
