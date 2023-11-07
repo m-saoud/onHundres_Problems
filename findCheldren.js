@@ -294,4 +294,4 @@ function myFunction(a) {
 
 }
 
-console.log(myFunction([5,4,3,2,1,0]))
+console.log(myFunction([5,4,3,2,1]))
