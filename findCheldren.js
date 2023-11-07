@@ -289,9 +289,54 @@ function sort(arr) {
 console.log(sort([1, 3, 5, 2, 8, 7, 9, 10, 4]));
 
 function myFunction(a) {
-  
-  return a.slice(0,3)
-
+  return a.slice(0, 3);
 }
 
-console.log(myFunction([5,4,3,2,1]))
+console.log(myFunction([5, 4, 3, 2, 1]));
+
+function myFunction(arr, n) {
+  return arr[n - 1];
+}
+
+console.log(myFunction([1, 2, 3, 4, 5], 3));
+
+function myFunction(a) {
+  return a.length;
+}
+console.log(myFunction([1, 2, 2, 4, 5, 7, 8, 9, 0]));
+
+function myFunction(a, b) {
+  if (a.hasOwnProperty(b) || b === null) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(myFunction({ x: "a", y: "b", z: "c" }, "a"));
+
+function myFunction2(a) {
+  // return a.replace(a[0], "") && (a[1], "") && (a[2], "");
+  return a.slice(3);
+}
+console.log(myFunction2([99, 1, 1]));
+
+function myFunctionss(str) {
+  return str.substring(str.length - 3);
+}
+
+console.log(myFunctionss("1234"));
+
+function typOfdata(a) {
+  return typeof a ===  "boolean"
+    ? "boolean"
+    : typeof a ===  "number"
+    ? "number"
+    : typeof a ===  "string"
+    ? " string"
+    : typeof a ===  "object"
+    ? "object"
+    : Array.isArray(a)
+    ? "array"
+    : "I CANT SEE";
+}
+console.log(typOfdata(['1','3']));
