@@ -204,8 +204,6 @@ function isLeapYear(year) {
 }
 console.log(isLeapYear(1800));
 
-
-
 function isSmooth(n) {
   let factor = 2;
 
@@ -235,3 +233,22 @@ console.log(isSmooth(60)); // "Hamming number"
 console.log(isSmooth(98)); // "humble number"
 console.log(isSmooth(230)); // "non-smooth"
 
+class HashMap {
+  constructor() {
+    this.map = {};
+  }
+  put(key, value, id) {
+    this.map[key] = value;
+    this.map[id] = [value, key].join();
+  }
+  get(key) {
+    return this.map[key];
+  }
+}
+
+const myMap = new HashMap();
+myMap.put("key1", "value1", "id1");
+myMap.put("key2", "value2");
+myMap.put("key3", "value3");
+
+console.log(myMap.get("id1"));
